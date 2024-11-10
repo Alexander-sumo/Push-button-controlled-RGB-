@@ -1,0 +1,20 @@
+// The goal is to control the RGB with a pushbutton. Main theme RGB and PushButton
+void setup() {
+  // put your setup code here, to run once:
+// Set pin 3 as an input for the button 
+ pinMode(3, INPUT); 
+ // Set pins 4, 5, and 6 as outputs for the RGB LED 
+pinMode(4, OUTPUT); // Red  
+pinMode(5, OUTPUT); // Green 
+pinMode(6, OUTPUT); // Blue  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+// Read the button state as 1 or 0 When the push button is pressed or not
+int buttonState = digitalRead(3);  
+// Control the RGB LED based on the button state 
+ digitalWrite(4, buttonState); // Red 
+ digitalWrite(5, buttonState); // Green 
+ digitalWrite(6, buttonState); // Blue
+}
